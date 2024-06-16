@@ -1,0 +1,123 @@
+@import url('https://unpkg.com/css.gg@2.0.0/icons/css/search.css');
+/* General Style */
+#root{
+  background-color: #555;
+  height: 100vh;
+}
+.App {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  overflow:hidden;
+}
+header,main{
+  background-color:#ddd;
+  width: 500px;
+}
+footer{
+  width: 500px;
+  height:50px;
+  background-color: rgb(204, 241, 204);
+}
+
+/* Header Style */
+header h1{
+  text-align:center;
+  color:#555;
+  text-shadow:5px 5px 5px rgb(110, 110, 110);
+}
+
+/* Main Style */
+main{
+  display: flex;
+  flex-direction:column;
+  border-bottom: 1px solid gray;
+}
+main input[type="text"]{
+  width: 80%;
+  height:20px;
+  align-self: center;
+  padding-left: 15px;
+}
+main input[type="text"]:focus{
+  outline: 1px solid rgb(0, 146, 195);
+  box-shadow: 2px 2px 5px rgb(0, 146, 195);
+}
+main ul{
+  list-style-type: none;
+  height:200px;
+  overflow-y: scroll;
+}
+main li{
+  padding: 10px;
+  border-bottom: 1px solid gray;
+  width: 85%;
+}
+main li:last-child{
+  border-bottom: none;
+}
+
+/* Footer Style */
+footer{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.gg-search {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  transform: scale(var(--ggs,1));
+  width: 16px;
+  height: 16px;
+  border: 2px solid;
+  border-radius: 100%;
+  margin-left: -4px;
+  margin-top: -4px
+}
+.gg-search::after {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  border-radius: 3px;
+  width: 2px;
+  height: 8px;
+  background: currentColor;
+  transform: rotate(-45deg);
+  top: 10px;
+  left: 12px
+}
+.gg-math-plus,
+.gg-math-plus::after {
+    display: block;
+    box-sizing: border-box;
+    background: currentColor;
+    border-radius: 10px
+}
+.gg-math-plus {
+    margin-top: -2px;
+    position: relative;
+    transform: scale(var(--ggs,1));
+    width: 16px;
+    height: 2px
+}
+.gg-math-plus::after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 16px;
+    top: -7px;
+    left: 7px
+}
+button
+{
+  background-color: transparent;
+  border: none;
+  transition: all .5s ease;
+}
+button:hover{
+  transform: scale(1.3);
+}
