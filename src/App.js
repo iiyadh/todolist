@@ -49,6 +49,7 @@ function App() {
   const Lsearch = ()=>{
     let temp = list.filter((item)=>item.task.includes(newTodo.task));
     setdislpayL(temp);
+    setApply(3);
   }
 
   //Handle All
